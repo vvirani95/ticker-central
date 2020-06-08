@@ -1,0 +1,98 @@
+// Place all the styles related to the ticker controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+h1 {
+    text-align: center;
+    font-family: Arial;
+}
+
+h2 {
+    text-align: center;
+    font-family: Arial;
+}
+
+div {
+    margin: 15px;
+    display: flex;
+}
+
+.third-one {
+    width: 100%;
+    float: left;
+    border: 2px solid lightgray;
+    height: auto;
+    padding: 10px;
+    background-color: rgb(41, 41, 41);
+    margin: 0 10px 0 10px;
+    font-family: Arial;
+}
+.third-two {
+    float: left;
+    border: 2px solid lightgray;
+    
+}
+
+.third-three {
+    width: 100%;
+    float: left;
+    height: auto;
+    border: 2px solid lightgray;
+    padding: 50px 0 50px 0;
+    background-color: rgb(41, 41, 41);
+    margin: 0 10px 0 10px;
+    font-family: Arial;
+}
+
+section > p {
+    margin: auto;
+    text-align: center;
+}
+
+html {
+    background-color: rgb(41, 41, 41);
+    color: white;
+}
+
+.stock-graph {
+    margin: auto;
+    text-align: center;
+    size: 50%;
+}
+
+ul > li {
+    list-style: none;
+    margin-bottom: 20px;
+    color: lightgray;
+}
+
+.third-one > ul > h2 {
+    text-align: left;
+}    
+
+.news-section {
+    list-style: none;
+    height: auto;
+    border: 2px solid lightgray;
+    padding: 50px 0 50px 0;
+    background-color: rgb(41, 41, 41);
+    margin: 10px 10px 0 10px;
+}
+
+a {
+    color: white;
+}
+
+.news-section > li {
+    padding: 25px;
+    text-align: center;
+    border-bottom: 2px solid lightgray;
+}
+
+.news-img {
+    
+    padding: 0px 0px 0px 20px;
+    width: 8%;
+    height: 8%;
+
+}
