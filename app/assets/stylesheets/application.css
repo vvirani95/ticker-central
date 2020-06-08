@@ -35,12 +35,8 @@ time, mark, audio, video {
 
 header {
     background-color: darkgreen;
-	padding: 30px;
+	padding: 20px;
 	height: auto;
-}
-
-header > section {
-	text-align: right;
 }
 
 .title {
@@ -62,27 +58,12 @@ header > section {
 .menu-icon:hover .dropdown { visibility: visible; }
 
 .top-header {
-	margin-top: -10px;
-}
-
-.i {
-	float: left;
-	margin-right: 30%;
+	margin-top: 10px; 
+	display: flex;
+	justify-content: space-between;
 }
 
 .ii {
-	float: left;
-	text-align: center;
-	margin: 0 auto;
+	margin-left: 250px;
 }
 
-.iii {
-	float: left;
-	margin: 0 auto;
-	margin-left: 15%;
-}
-
-.site-icon {
-	width: 48%;
-	height: 48%;
-}

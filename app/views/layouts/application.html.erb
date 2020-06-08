@@ -2,23 +2,23 @@
 <html>
   
   <header>
-    <ul class="top-header">  
-    <li class="i"><div>
+    <div class="top-header">  
+    <div class="i">
       <%= image_tag('hamburger-icon.png', class: "menu-icon") %>
       <section class="dropdown">
       </section>
-    </div></li>
+    </div>
 
-    <li class="ii"><%= link_to image_tag('site-icon.png', class: "site-icon"), root_path %></li>
+    <div class="ii"><%= link_to image_tag('site-icon.png', class: "site-icon"), root_path %></div>
 
-    <li class="iii"><section>
+    <div class="iii"><section>
       <form action="/ticker" method="GET">
         <label for="ticker-search-bar">Search: </label>
         <input type="text" class="ticker-search-bar" name="search">
         <button type="submit">Submit</button>
       </form>
-    </section></li>
-    </ul>
+    </div>
+    </div>
   </header>
   
   <br>
