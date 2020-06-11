@@ -6,4 +6,29 @@
     <span>Russell 2000: <%= (@indice[2] * 10).round(2) %></span>
 </div>
 
+<div class="movers-gainers-main">
+    <div class="gainers-section">
+    <h2 class="movers-heading">Daily Top 5 Gainers:</h2>
+    <% @movers[0].each do |x| %>
+           <div class="movers-boxes">
+              <a href="/ticker?search=<%= x["symbol"] %>"><li class="symbol-title"> <%= x["symbol"] %> </li></a>
+              <li class="gainers-percent"> <%= (x["changePercent"] * 100).round(2) %>% </li>
+           </div>        
+    <% end %>
+    </div>
+</div>    
+
+<div class="movers-losers-main">
+    <div class="losers-section">
+    <h2 class="movers-heading">Daily Top 5 Losers:</h2>
+    <% @movers[1].each do |y| %>
+           <div class="movers-boxes">
+              <a href="/ticker?search=<%= y["symbol"] %>"><li class="symbol-title"> <%= y["symbol"] %>:</li></a>
+              <li class="losers-percent"> <%= (y["changePercent"] * 100).round(2) %>% </li>
+           </div>        
+    <% end %>
+    </div>
+</div>
+</div>
+
 </html>
