@@ -1,5 +1,15 @@
 <html>
 
+<% 
+
+    if @ticker["regularMarketChange"]["fmt"].to_i >= 0
+        price_class = "price-class-green"
+    else
+        price_class = "price-class-red"
+    end     
+    
+%>
+
 <span>
     <h1 class="stock-name"><%= @ticker["longName"] %></h1>
     <h2>Ticker: <%= @ticker["symbol"] %></h2>
@@ -17,7 +27,7 @@
             <h2>Outstanding Shares:</h2>
             <li><%= @ticker["sharesOutstanding"]["fmt"] %></li>
             <h2>Fifty Two Week High percent change:</h2>
-            <li><%= @ticker["fiftyTwoWeekHighChange"]["fmt"] %>%</li>
+            <li><%= @ticker["fiftyTwoWeekHighChangePercent"]["fmt"] %></li>
         </ul>
     </section>
 
@@ -30,7 +40,7 @@
         new TradingView.widget(
         {
         "width": 803, //980,
-        "height": 500,  //610,
+        "height": 450,  //610,
         "symbol": ":<%= @ticker["symbol"] %>",
         "interval": "D",
         "timezone": "Etc/UTC",
@@ -50,7 +60,17 @@
     </section>
     
     <section class="third-three">
-        <p>$<%= @ticker["fiftyTwoWeekRange"]["fmt"] %></p>
+        <ul>    
+            <h2>Latest Price:</h2>
+            <li class= <%= price_class %> >$<%= @iex_quote["quote"]["latestPrice"].round(2) %></li> 
+            <br>
+            <h2>Upcoming Earnings Date:</h2>
+            <li><%= @iex_data["nextEarningsDate"] %></li>
+            <h2>Dividend Rate:</h2>
+            <li><%= @iex_data["ttmDividendRate"] ||= "N/A" %></li>
+            <h2>P/E Ratio:</h2>
+            <li><%= @iex_data["peRatio"] %></li>
+        </ul>
     </section>
 
 </div>

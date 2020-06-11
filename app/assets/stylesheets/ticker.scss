@@ -38,7 +38,7 @@ div {
     float: left;
     height: auto;
     border: 2px solid lightgray;
-    padding: 50px 0 50px 0;
+    padding: 10px;
     background-color: rgb(41, 41, 41);
     margin: 0 10px 0 10px;
     font-family: Arial;
@@ -89,10 +89,28 @@ a {
     border-bottom: 2px solid lightgray;
 }
 
-.news-img {
+.price-class-green {
+    text-align: center;
+    color: green;
+    font-size: 50px;
+}
+
+.price-class-red {
+    text-align: center;
+    color: red;
+    font-size: 50px;
+}
     
+.news-img {
     padding: 0px 0px 0px 20px;
     width: 8%;
     height: 8%;
+}
 
+.third-three > ul > h2 {
+	text-align: left;
+}
+
+.third-three > ul > h2:first-of-type {
+	text-align: center;
 }
