@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
 
-  $api_key = Rails.application.credentials.iex[:iex_api_key]
+  $api_key = ENV["IEX_API_KEY"]
 
   def indice_call(ticker_arr)
       indice = []
