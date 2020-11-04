@@ -1,13 +1,15 @@
 class ApplicationController < ActionController::Base
 
+  require 'httparty'
+
   $api_key = ENV["IEX_API_KEY"]
 
   def indice_call(ticker_arr)
       indice = []
 
       ticker_arr.each do |x|
-          uri = URI(`https://cloud.iexapis.com/v1/stock/#{x}/quote/latestPrice?token=#{$api_key}`)
-          indice << JSON.parse(Net::HTTP.get_response(uri).body)
+          uri = (`https://cloud.iexapis.com/v1/stock/#{x}/quote/latestPrice?token=#{$api_key}`)
+          indice << JSON.parse(HTTParty.get(uri))
       end
 
       return(indice)
