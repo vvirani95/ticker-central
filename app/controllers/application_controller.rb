@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
       indice = []
 
       ticker_arr.each do |x|
-          uri = URI('https://cloud.iexapis.com/v1/stock/' + x + '/quote/latestPrice?token=' + $api_key)
+          uri = URI(`https://cloud.iexapis.com/v1/stock/#{x}/quote/latestPrice?token=#{$api_key}`)
           indice << JSON.parse(Net::HTTP.get(uri))
       end
 
