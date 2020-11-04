@@ -1,0 +1,61 @@
+// Place all the styles related to the movers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.indices {
+    clear: left;
+    font-family: arial;
+}
+
+.indices > span {
+
+    border: 1px solid lightgray;
+    font-size: 50px;
+    padding: 50px;
+    text-align: center;
+    width: 33.33%;
+
+}
+
+.graph-span {
+  display: inline-block;
+}
+
+.tview {
+  float:left;
+}
+
+.tview-1 {
+  float: left;
+}
+
+.movers-boxes {
+    padding: 50px;
+    border: 1px solid lightgray;
+    margin: auto;
+    font-size: 30px;
+    font-family: arial;
+}
+
+.gainers-percent {
+    color: green;
+}
+
+.losers-percent {
+    color: red;
+}
+
+li {
+    list-style: none;
+}
+
+.movers-gainers-main {
+    padding-bottom: 100px;
+}
+
+.movers-heading {
+    padding: 50px;
+}
+
+.symbol-title {
+    margin-right: 10px;
+}

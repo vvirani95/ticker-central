@@ -1,0 +1,38 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.crypt_info {
+  display: inline-block;
+  text-align: center;
+}
+
+.crypt_each {
+  border: 1px solid green;
+  margin-right: 20px;
+  margin-left: 25px;
+  padding: 50px;
+  float: left;
+  width: auto;
+  font-size: 30px;
+  margin-top: 30px;
+  font-family: arial;
+}
+
+.crypt_each span:first-of-type {
+  margin-right: 5px;
+}
+
+.news-section-alone {
+    list-style: none;
+    height: auto;
+    border: 2px solid lightgray;
+    padding: 50px 0 50px 0;
+    background-color: rgb(41, 41, 41);
+    margin: 10px 10px 0 10px;
+}
+
+.news-section-alone > li {
+    padding: 25px;
+    text-align: center;
+    border-bottom: 2px solid lightgray;
+}

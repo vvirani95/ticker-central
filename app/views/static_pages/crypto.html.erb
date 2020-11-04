@@ -1,0 +1,8 @@
+<div class="crypt_info">
+  <% @crypto.each do |crypt| %>
+    <div class="crypt_each">
+      <span><%= crypt["price"].to_f.round(2).to_s %> </span>
+      <span><%= crypt["symbol"] %></span>
+    </div>
+  <% end %>
+</div>

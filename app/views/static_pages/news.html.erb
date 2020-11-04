@@ -1,0 +1,7 @@
+<section class="news-section-alone">
+    <% @news.each do |story| %>
+    <h2><a href= <%= story["url"]%> > <%=  story["headline"] %> </a></h2>
+    <%= image_tag(story["image"], class: "news-img") %>
+    <li> <%= story["summary"] %> </li>
+    <% end %>
+</section>
